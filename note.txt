@@ -1,0 +1,10 @@
+github reference repo: https://github.com/AntonioErdeljac/next13-airbnb-clone
+
+stopped at: 2:27:24
+
+> supabase prisma migrate command
+  - npx prisma migrate dev --name init
+> monbodb prisma migrate command
+  - npx prisma db push
+> when you switch from one sql database run
+  - npx prisma generate
