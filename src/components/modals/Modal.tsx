@@ -64,8 +64,8 @@ const Modal: React.FC<ModalProps> = ({
   }
   return (
     <>
-      <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-neutral-800/70">
-        <div className="relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 my-6 mx-auto lg:h-auto md:h-auto">
+      <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full md:w-4/6 lg:w-3/6 xl:w-2/5 lg:h-auto z-20">
           {/* CONTENT */}
           <div className={
             `
@@ -112,6 +112,7 @@ const Modal: React.FC<ModalProps> = ({
             </div>
           </div>
         </div>
+        <div onClick={handleClose} className="bg-neutral-800/70 w-full h-full top-0 left-0 z-10"></div>
       </div>
     </>
   )

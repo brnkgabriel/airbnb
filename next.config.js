@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: ""
+  basePath: "",
+  images: {
+    domains: [
+      'avatars.githubusercontent.com'
+    ]
+  }
 }
 
 module.exports = nextConfig
