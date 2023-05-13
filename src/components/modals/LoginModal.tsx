@@ -42,10 +42,11 @@ const LoginModal = () => {
     try {
 
       const callback = await signIn('credentials', { ...data, redirect: false })
+      console.log("callback from login modal is", callback)
       if (callback?.ok) {
         toast.success("Logged in")
-        // router.refresh()
-        location.reload()
+        router.refresh()
+        // location.reload()
       }
       if (callback?.error) {
         toast.error(callback.error)

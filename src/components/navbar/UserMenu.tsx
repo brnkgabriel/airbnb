@@ -17,6 +17,8 @@ const UserMenu:React.FC<UserMenuProps> = ({ currentUser }) => {
   const loginModal = useLoginModal()
   const [isOpen, setIsOpen] = useState(false)
 
+  console.log("from navbar > user menu, current user is", currentUser)
+
   const toggleOpen = useCallback(() => setIsOpen((value) => !value), [])
 
   return (

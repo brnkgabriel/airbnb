@@ -13,10 +13,12 @@ import Input from "../inputs/Input"
 import { toast } from "react-hot-toast"
 import Button from "./Button"
 import { signIn } from "next-auth/react"
+import { useRouter } from "next/navigation"
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal()
   const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
 
   const {
     register,
@@ -36,7 +38,9 @@ const RegisterModal = () => {
     setIsLoading(true)
 
     try {
-      await axios.post('/api/register', data)
+      const response = await axios.post('/api/register', data)
+      router.refresh()
+      console.log("response from register is", response)
       registerModal.onClose()
     } catch (error: any) {
       toast.error(error.message)
