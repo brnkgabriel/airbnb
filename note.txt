@@ -1,6 +1,6 @@
 github reference repo: https://github.com/AntonioErdeljac/next13-airbnb-clone
 
-stopped at: 2:35:07
+stopped at: 2:44:44
 
 > supabase prisma migrate command
   - npx prisma migrate dev --name init
